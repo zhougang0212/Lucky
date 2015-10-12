@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>旋转木马</title>
+		<link rel="stylesheet" href="css/galloper.css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="js/galloper.js"></script>
+	</head>
+	<body>
+		<div class="J_Poster poster-main clearfix" data-setting='{
+				"width":1000,
+				"height":336,
+				"posterWidth":800,
+				"posterHeight":336,
+				"scale":0.9,
+				"speed":500,
+				"verticalAlign":"middle"
+		}'>
+			<div class="poster-btn poster-btn-prev"></div>
+			<ul class="poster-list">
+				<li class="poster-item"><a href=""><img src="img/1.jpg" alt="pic1" /></a></li>
+				<li class="poster-item"><a href=""><img src="img/2.jpg" alt="pic2" /></a></li>
+				<li class="poster-item"><a href=""><img src="img/3.jpg" alt="pic3" /></a></li>
+				<li class="poster-item"><a href=""><img src="img/4.jpg" alt="pic4" /></a></li>
+				<li class="poster-item"><a href=""><img src="img/5.jpg" alt="pic5" /></a></li>
+			</ul>
+			<div class="poster-btn poster-btn-next"></div>
+		</div>
+		
+	</body>
+	<script>
+		$(function(){
+			//carousel
+			/*var carousel=new Carousel($(".J_Poster").eq(0));*/ //通过new的方式创建对象，只能逐个传递
+			
+			Carousel.init($(".J_Poster"));						//获取当前插件集合进行传递，初始化函数
+		});
+	</script>
+</html>

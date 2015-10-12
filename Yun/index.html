@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>云量识别</title>
+		<!--jquery UI css-->
+		<link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.min.css" />
+    <!-- Bootstrap -->
+    <link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--self css-->
+		<link href="css/global.css" rel="stylesheet">	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="container">
+  			<header class="head row">
+   				<h2>云量自动识别系统</h2>
+  			</header>
+  			<div id="tabs" class="row">
+  				<div class="navBg">
+						<ul>
+							<li><a href="#monitor">云量监测</a></li>
+							<li><a href="#count">云量统计</a></li>
+							<li><a href="#manage">系统管理</a></li>
+						</ul>
+					</div>
+					<div id="monitor" class="content">
+						<div class="col-sm-7">
+								<div class="panel">
+									<select name="">
+										<option value="">2015-07-20 15:00</option>
+										<option value="">2015-07-20 15:00</option>
+									</select>
+									<a href="#" class="oper prev"></a>
+									<a href="#" class="oper run"></a>
+									<a href="#" class="oper next"></a>
+									<span class="desc">0份云&nbsp;微量</span>
+								</div>
+								<div class="video">
+									<img src="images/aa.jpg" alt="监测录像"/>
+								</div>
+						</div>
+						<div class="col-sm-5 tablebox detailInfo">
+							<table class="table listTable table-bordered">
+								<tr>
+									<td>08</td>
+									<td>09</td>
+									<td>10</td>
+									<td>11</td>
+									<td>12</td>
+									<td>13</td>
+									<td>14</td>
+									<td>15</td>
+								</tr>
+								<tr>
+									<td><img src="images/bili.png"/></td>
+									<td><img src="images/bili.png"/></td>
+									<td><img src="images/bili.png"/></td>
+									<td><img src="images/bili.png"/></td>
+									<td><img src="images/bili.png"/></td>
+									<td><img src="images/bili.png"/></td>
+									<td><img src="images/bili.png"/></td>
+									<td><img src="images/bili.png"/></td>
+								</tr>
+								<tr>
+									<td>23&#8451;</td>
+									<td>23&#8451;</td>
+									<td>23&#8451;</td>
+									<td>23&#8451;</td>
+									<td>23&#8451;</td>
+									<td>23&#8451;</td>
+									<td>23&#8451;</td>
+									<td>23&#8451;</td>
+								</tr>
+								<tr>
+									<td>晴</td>
+									<td>多云</td>
+									<td>小雨</td>
+									<td>晴</td>
+									<td>晴</td>
+									<td>晴</td>
+									<td>晴</td>
+									<td>晴</td>
+								</tr>
+							</table>
+							<table class="table table-bordered listTable">
+								<tr>
+									<th>云量判断细则</th>
+								</tr>
+								<tr>
+									<td>
+										<p>整个图片分为1000格；</p>
+										<p>一、所读取格子数为0，则记录为0，表示无云；</p>
+										<p>一、所读取格子数为0，则记录为0，表示无云；</p>
+										<p>一、所读取格子数为0，则记录为0，表示无云；</p>
+										<p>一、所读取格子数为0，则记录为0，表示无云；</p>
+										<p>一、所读取格子数为0，则记录为0，表示无云；</p>
+										<p>一、所读取格子数为0，则记录为0，表示无云；</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div id="count" class="content">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+					<div id="manage" class="content">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+				</div>
+  	</div>
+    <script src="js/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+    <script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script src="js/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+  <script type="text/javascript">
+  	$(function(){
+  		$( "#tabs" ).tabs();
+  	});
+  </script>
+</html>

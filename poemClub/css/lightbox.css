@@ -1,0 +1,107 @@
+@charset "utf-8";
+/*样式重置*/
+/* haozi / hao.chen@qq.com / 2011.06.15 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,blockquote,th,td,p{margin:0;padding:0}
+input,button,select,textarea{outline:none}li{list-style:none}img{border:none}textarea{resize:none}
+body{color:#666;background:#fff;word-break:break-all;word-wrap:break-word;}
+body,input,textarea{font-size:12px;font-family:\5b8b\4f53,Verdana,Arial}
+a{color:#305999;text-decoration:none;outline:none}
+a:hover{color:#090}
+.wrap{width:1000px;margin:0 auto;text-align:left;position:relative}
+/*clearfix*/
+.clearfix:after,.wrap:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix,.wrap{*+height:1%}
+/*
+ * edit by wulz
+ * 2015-7-28
+ */
+#G-light-mask{
+	position: fixed;
+	left: 0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity: 0.5;
+	-webkit-opacity: 0.5;
+	filter:alpha(opcity="50%");
+	z-index:10000;
+	display:none;
+	background:url(../img/opacity.png) repeat left top;
+}
+#G-light-popuup{
+	position: fixed;
+	width:400px;
+	left:50%;
+	top:50px;
+	margin-left:-200px;
+	z-index:10001;
+	display:none;
+}
+#G-light-popuup .picBox{
+	border:5px solid #fff;
+	position:relative;
+	border-radius: 3px;
+	overflow: hidden;
+	background: url(../img/loading.gif) no-repeat scroll center center #fff;
+}
+#G-light-popuup .picBox .picNav{
+	color:#fff;
+	position: absolute;
+	top:0;
+	width:40%;
+	height:100%;
+	z-index: 1;
+	cursor: pointer;
+	background: url(../img/transparent.png) repeat left top;
+}
+#G-light-popuup .picBox .picNav-next{
+	right:0;
+	text-align: right
+}
+#G-light-popuup .picBox .picNav-prev{
+	left:0;
+}
+#G-light-popuup .picBox .picNav-next-show{
+	background: url(../img/next.png) no-repeat right center;
+}
+#G-light-popuup .picBox .picNav-prev-show{
+	background: url(../img/prev.png) no-repeat left center;
+}
+#G-light-popuup .picBox .image{
+	display: block;
+}
+#G-light-popuup .picIntro{
+	position:relative;
+	background-color:#2C2A2A;
+	margin:0 5px;
+	margin-top:-63px;
+	z-index:2;
+	opacity: 0.7;
+	filter: alpha(opacity="70%");
+	background: url(../img/opacity.png) repeat left top;
+}
+#G-light-popuup .picIntro .picInfo{
+	padding:10px 5px;
+	color:#fff;
+}
+#G-light-popuup .picIntro .picInfo .picTitle{
+	padding-bottom:8px;
+	font-size:14px;
+}
+#G-light-popuup .picIntro .picInfo .picIndex{
+	padding-top:10px;
+	color:#BEB7B7;
+}
+#G-light-popuup .picIntro .closeBtn{
+	position: absolute;
+	width:27px;
+	height:27px;
+	background:url(../img/close.png) no-repeat center center;
+	top: 15px;
+  	right: 5px;
+  	cursor: pointer;
+}
+
+
+

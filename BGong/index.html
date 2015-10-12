@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>砍价游戏</title>
+    	<link rel="stylesheet" type="text/css" href="js/bootstrap/3.0.1/css/bootstrap.css"/>
+    	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    	<link rel="stylesheet" href="css/game.css" />
+    	<script src="js/bootstrap/3.0.1/js/jquery-1.11.1.js"></script>
+		<script src="js/bootstrap/3.0.1/js/bootstrap.min.js"</script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="head">
+				<i class="iconfont icon-back">返回</i>
+			</div>
+			<div class="banner col-xs-12"><img src="img/banner.png" alt="pic" /></div>
+			<div class="col-xs-12 oper">
+				<a onclick="changeH('#rule')" href="#rule" class="btn btn-intro">活动规则介绍>></a>
+				<div class="time col-xs-12">
+				我的活动倒计时:
+				<span id="time_h">13</span>时<span id="time_m">23</span>分<span id="time_s">44</span>秒
+				</div>
+				<a href="#list" data-toggle="modal"><r>3</r>位好友帮砍(看看谁最给力)</a>
+				<div>
+					<!--
+					<button type="button" class="btn btn-orange" onclick="changeH('#zero')">我要0元车险</button>
+					<button type="button" class="btn btn-danger" onclick="changeH('#reduce')">帮他砍价</button>
+					
+					自己点击“我要0元车险之后”显示该按钮-->
+					<button type="button" class="btn btn-orange" data-toggle="modal" data-target="#help">邀人帮砍</button>
+					<button type="button" class="btn btn-danger">立即投保</button>
+				</div>
+				<div class="list">
+					<span>排名</span><span>车牌号</span><span>砍掉金额</span>
+					<div id="marquee2" class="marqueetop">
+					  <div>
+						    <ul id="marquee2_1">
+						       <li><span>1</span><span>浙A1xxx9</span><span>600元</span></li>
+						       <li><span>2</span><span>浙A1xxx9</span><span>500元</span></li>
+						       <li><span>3</span><span>浙A1xxx9</span><span>470元</span></li>
+						       <li><span>4</span><span>浙A1xxx9</span><span>460元</span></li>
+						       <li><span>5</span><span>浙A1xxx9</span><span>450元</span></li>
+						       <li><span>6</span><span>浙A1xxx9</span><span>370元</span></li>
+						       <li><span>7</span><span>浙A1xxx9</span><span>360元</span></li>
+						       <li><span>8</span><span>浙A1xxx9</span><span>330元</span></li>
+						       <li><span>9</span><span>浙A1xxx9</span><span>290元</span></li>
+						       <li><span>10</span><span>浙A1xxx9</span><span>260元</span></li>
+						       <li><span>11</span><span>浙A1xxx9</span><span>200元</span></li>
+						    </ul>
+					    	<ul id="marquee2_2">
+					    	</ul>
+					  </div>
+					</div>
+				</div>
+			</div>				
+		</div>
+	</body>
+	<!--模态框开始-->
+	<div class="modal fade" id="rule" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content" >
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  &times;
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	              	活动规则介绍
+	            </h4>
+	         </div>
+	         <div class="modal-body">
+	            <p>1）、参加砍价游戏（我要0元保车险），要求先关注公众号，砍价不需要关注；</p>
+				<p>2）、每次砍价金额随机，按以下规则：已有0-10位 朋友砍价，每次随机1元~ 25元（电销）；已有10-30位朋友砍价，每次随机5~25元（电销10个点）；已有超过30位朋友砍价，每次随机10-30元；</p>
+				<p>3）、每个砍价游戏时间为240小时；</p>
+				<p>4）、游戏结束后，按正常报价流程，砍价优惠将显示在报价内</p>
+	         </div>
+	      </div>
+	</div>
+	</div>
+	
+	<div class="modal fade" id="zero" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  &times;
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	               	我要0元车险
+	            </h4>
+	         </div>
+	         <div class="modal-body">
+	           <div class="panel">请输入以下信息：</div>
+	           <ul class="list-group">
+	           		<li class="list-group-itme">车牌号：<input type="text" /></li>
+	           		<li class="list-group-itme">手机号：<input type="text" /></li>
+	           </ul>
+	         </div>
+	         <div class="modal-footer">
+	            <button type="button" class="btn btn-warning">
+	               	开始砍价
+	            </button>
+	         </div>
+	      </div><!-- /.modal-content -->
+		</div>	
+	</div>
+	
+	<div class="modal fade" id="reduce" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  &times;
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	               	帮忙砍价
+	            </h4>
+	         </div>
+	         <div class="modal-body">
+	           	<p>你本次帮xxx砍下了<b>20</b>元！</p>
+	           	<p>0元车险等你来拿，一起来参加吧！！</p>
+	           </ul>
+	         </div>
+	      </div><!-- /.modal-content -->
+		</div>	
+	</div>
+	
+	<div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <img src="img/nav.png" alt="pic" />
+	</div>
+	
+	<div class="modal fade" id="list" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  &times;
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	               	好友帮砍排行
+	            </h4>
+	         </div>
+	         <div class="modal-body">
+	           	<ul class="list-group">
+	           		<li class="list-group-itme">
+	           			<img src="img/head.png" alt="pic" />
+	           			一场说砍就砍的旅行，<r>12.24</r>元不谢！
+	           		</li>
+	           		<li class="list-group-itme">
+	           			<img src="img/tubiao1.png" alt="pic" />
+	           			一场说砍就砍的旅行，<r>20.24</r>元不谢！
+	           		</li>
+	           		<li class="list-group-itme">
+	           			<img src="img/tubiao2.png" alt="pic" />
+	           			一场说砍就砍的旅行，<r>33.12</r>元不谢！
+	           		</li>
+	           	</ul>
+	           </ul>
+	         </div>
+	      </div><!-- /.modal-content -->
+		</div>	
+	</div>
+	<!--模态框结束-->
+	<script type="text/javascript">
+			//js无缝滚动代码
+	function marquee(i, direction){
+		var obj = document.getElementById("marquee" + i);
+		var obj1 = document.getElementById("marquee" + i + "_1");
+		var obj2 = document.getElementById("marquee" + i + "_2");
+		if (direction == "up"){
+			if (obj2.offsetTop - obj.scrollTop <= 0){
+				obj.scrollTop -= (obj1.offsetHeight + 20);
+			}else{
+				var tmp = obj.scrollTop;
+				obj.scrollTop++;
+				if (obj.scrollTop == tmp){
+					obj.scrollTop = 1;
+				}
+			}
+		}else{
+			if (obj2.offsetWidth - obj.scrollLeft <= 0){
+				obj.scrollLeft -= obj1.offsetWidth;
+			}else{
+				obj.scrollLeft++;
+			}
+		}
+	}
+	
+	function marqueeStart(i, direction){
+		var obj = document.getElementById("marquee" + i);
+		var obj1 = document.getElementById("marquee" + i + "_1");
+		var obj2 = document.getElementById("marquee" + i + "_2");
+	
+		obj2.innerHTML = obj1.innerHTML;
+		var marqueeVar = window.setInterval("marquee("+ i +", '"+ direction +"')", 20);
+		obj.onmouseover = function(){
+			window.clearInterval(marqueeVar);
+		}
+		obj.onmouseout = function(){
+			marqueeVar = window.setInterval("marquee("+ i +", '"+ direction +"')", 20);
+		}
+	}
+	/*调用滚动方法*/
+	marqueeStart(2, "up");
+	
+	/*调用倒计时*/
+		$(function(){
+			show_time();
+		});
+	/*倒计时方法*/	
+	function show_time(){ 
+	var time_start = new Date().getTime(); //设定当前时间
+	var time_end =  new Date("2015/10/01 00:00:00").getTime(); //设定目标时间
+	// 计算时间差 
+	var time_distance = time_end - time_start; 
+//	// 天
+//	var int_day = Math.floor(time_distance/86400000) 
+//	time_distance -= int_day * 86400000; 
+	// 时
+	var int_hour = Math.floor(time_distance/3600000) 
+	time_distance -= int_hour * 3600000; 
+	// 分
+	var int_minute = Math.floor(time_distance/60000) 
+	time_distance -= int_minute * 60000; 
+	// 秒 
+	var int_second = Math.floor(time_distance/1000) 
+	// 时分秒为单数时、前面加零 
+//	if(int_day < 10){ 
+//		int_day = "0" + int_day; 
+//	} 
+	if(int_hour < 10){ 
+		int_hour = "0" + int_hour; 
+	} 
+	if(int_minute < 10){ 
+		int_minute = "0" + int_minute; 
+	} 
+	if(int_second < 10){
+		int_second = "0" + int_second; 
+	} 
+	// 显示时间 
+	//$("#time_d").html(int_day); 
+	$("#time_h").html(int_hour); 
+	$("#time_m").html(int_minute); 
+	$("#time_s").html(int_second); 
+	// 设置定时器
+	setTimeout("show_time()",1000); 
+}
+	function changeH(id){
+		$(id).modal('show');
+		$(id).on('shown.bs.modal', function () {
+		var m_h=$('.modal-content').outerHeight(); 
+		var p_h=$(document.body).outerHeight();
+		var top=(p_h-m_h)/2;
+		$(id).animate({paddingTop:top},'normal');
+		})
+	}
+	</script>
+</html>

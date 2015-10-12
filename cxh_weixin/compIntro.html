@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="Description" content="车小虎"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>公司介绍</title>
+		<link rel="stylesheet" href="js/bootstrap/3.0.1/css/bootstrap.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/weixin.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap/3.0.1/js/bootstrap.js"></script>
+	</head>
+	<body>
+		<div class="content intro">
+			<div class="head col-xs-12">
+				<a href="javascript:;" onClick="javascript :history.back(-1);"><i class="iconfont icon-back">返回</i></a>
+				杭州小拇指汽车维修
+			</div>
+			<div class="banner">
+				<div id="myCarousel" class="carousel slide">
+				   <!-- 轮播（Carousel）指标 -->
+				   <ol class="carousel-indicators">
+				      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				      <li data-target="#myCarousel" data-slide-to="1"></li>
+				   </ol>   
+				   <!-- 轮播（Carousel）项目 -->
+				   <div class="carousel-inner">
+				      <div class="item active">
+				         <img src="img/intro.png" alt="First slide">
+				      </div>
+				      <div class="item">
+				         <img src="img/intro.png" alt="Second slide">
+				      </div>
+				   </div>
+				</div> 
+			</div>
+			
+			<div class="desc">
+				<p>杭州小拇指汽车维修科技股份有限公司</p>
+				<div class="col-xs-2"><span class="iconfont icon-location"></span></div>
+				<div class="col-xs-10">杭州市江干区凤起东路358号五福天星龙大厦B座20楼</div>
+				                           
+			</div>
+			<div class="foot">
+				上海宝荣机油促销活动
+			</div>
+		</div>
+	</body>
+	<script>
+		$(function(){
+			$('.carousel').carousel();
+		});
+	</script>
+</html>
