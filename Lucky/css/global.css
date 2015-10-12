@@ -1,0 +1,140 @@
+/*重置css样式*/
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,blockquote,pre,form,fieldset,legend,input,button,textarea,hr{margin:0;padding:0}
+body,button,input,select,textarea{ font:12px/1.5 "宋体",arial, verdana, sans-serif}
+h1,h2,h3,h4,h5,h6{font-weight:normal}
+li{list-style:none}
+fieldset,img{border:0}
+table{border-collapse:collapse;border-spacing:0}
+q:before,q:after{content:”}
+button,input,select,textarea{font-size:100%}
+legend{color:#000}
+small{font-size:12px}
+hr{border:none;height:1px}
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+.cle:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.cle{ display:inline-block}
+.cle{ display:block}
+.clear {clear: both;}
+/*edit by wulz*/
+.container{
+	width:100%;
+}
+body{
+	background:url(../img/bodybg.png) repeat;
+	min-width: 1125px;
+}
+.index .banner{
+	background:#fff url(../img/las.jpg) no-repeat center;
+	background-size:cover;
+	height:655px;
+	width:100%;
+}
+.index .mask{
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.75);
+	position: relative;
+}
+.index .head>.logo{
+	font-family: STCaiyun;
+	font-weight: bold;
+	color: #F9F7F7;
+	font-size:50px;
+	float: left;
+	margin-left: 55px;
+}
+.index .head{
+	height:75px;
+}
+.index .right-nav{
+	display: inline-block;
+	float: right;
+	position: relative;
+}
+.index .right-nav .share{
+	position: absolute;
+	top: 52px;
+  	right: 10px;
+  	display: none;
+}
+.index .right-nav>ul>li{
+	float: left;
+	margin: 0 15px;
+  	font-size: 16px;
+  	font-family: microsoft yahei;
+  	line-height: 75px;
+}
+.index .right-nav ul li a{
+	color:#EAE7E7;
+}
+.index .right-nav ul li a:hover{
+	color:#fff;
+}
+.index .title{
+	text-align: center;
+	margin-top: 180px;
+}
+.index .title p{
+	font-size:38px;
+	color:#D0CFCE;
+}
+.index .title .btn-in{
+ 	width: 150px;
+  	border: 1px solid #ddd;
+  	color: #B2AFAF;
+  	margin-top: 40px;
+}
+.index .title a.btn-in:hover{
+	color:#fff;
+	box-shadow: 0px 0px 15px 0px #fff;
+}
+.index .mask .arrow{
+	position: absolute;
+  	bottom: -43px;
+  	width: 100%;
+  	text-align: center;
+  	color: #331E03;
+}
+.index .mask .arrow i{
+	font-size:45px;
+}
+.index .content{
+	padding:40px 0;
+}
+.index .content .col-sm-4{
+	padding:0px 15px;
+}
+.index .content .panel{
+	font-size:13px;
+	height:530px;
+}
+.index .content .panel .panel-title{
+	text-align: center;
+	font-weight: bold;
+}
+.index .foot{
+	text-align: center;
+	width:100%;
+	height:50px;
+	color:#fff;
+	font-size:15px;
+	padding-top:15px;
+	background-color:#514B4B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
