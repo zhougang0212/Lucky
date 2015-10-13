@@ -5,33 +5,31 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<title>砍价游戏</title>
-    	<link rel="stylesheet" type="text/css" href="js/bootstrap/3.0.1/css/bootstrap.css"/>
+    	<link rel="stylesheet" type="text/css" href="js/bootstrap-3.3.5-dist/css/bootstrap.css"/>
     	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
     	<link rel="stylesheet" href="css/game.css" />
-    	<script src="js/bootstrap/3.0.1/js/jquery-1.11.1.js"></script>
-		<script src="js/bootstrap/3.0.1/js/bootstrap.min.js"</script>
+    	<script src="js/jquery-1.11.1.js"></script>
+    	<script src="js/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div class="main">
-			<div class="head">
-				<i class="iconfont icon-back">返回</i>
-			</div>
-			<div class="banner col-xs-12"><img src="img/banner.png" alt="pic" /></div>
+			<div class="banner col-xs-12"></div>
 			<div class="col-xs-12 oper">
-				<a onclick="changeH('#rule')" href="#rule" class="btn btn-intro">活动规则介绍>></a>
+				
 				<div class="time col-xs-12">
-				我的活动倒计时:
-				<span id="time_h">13</span>时<span id="time_m">23</span>分<span id="time_s">44</span>秒
+				<p>砍价倒计时:</p>
+				<span id="time_h">13</span>时：<span id="time_m">23</span>分
 				</div>
-				<a href="#list" data-toggle="modal"><r>3</r>位好友帮砍(看看谁最给力)</a>
+				<a data-toggle="modal" href="#rule" class="btn btn-intro">活动规则介绍</a>
+				<a href="#list" data-toggle="modal" class="note">共<r>10</r>位好友帮砍,共<r>200</r>元</a>
 				<div>
-					<!--
-					<button type="button" class="btn btn-orange" onclick="changeH('#zero')">我要0元车险</button>
-					<button type="button" class="btn btn-danger" onclick="changeH('#reduce')">帮他砍价</button>
 					
-					自己点击“我要0元车险之后”显示该按钮-->
+					<button type="button" class="btn btn-orange" data-toggle="modal" data-target="#zero">我要0元车险</button>
+					<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#reduce">帮他砍价</button>
+					
+					<!--自己点击“我要0元车险之后”显示该按钮
 					<button type="button" class="btn btn-orange" data-toggle="modal" data-target="#help">邀人帮砍</button>
-					<button type="button" class="btn btn-danger">立即投保</button>
+					<button type="button" class="btn btn-danger">立即投保</button>-->
 				</div>
 				<div class="list">
 					<span>排名</span><span>车牌号</span><span>砍掉金额</span>
@@ -96,14 +94,12 @@
 	         <div class="modal-body">
 	           <div class="panel">请输入以下信息：</div>
 	           <ul class="list-group">
-	           		<li class="list-group-itme">车牌号：<input type="text" /></li>
-	           		<li class="list-group-itme">手机号：<input type="text" /></li>
+	           		<li class="list-group-itme"><input class="form-control" type="text" placeholder="车牌号"/></li>
+	           		<li class="list-group-itme"><input class="form-control" type="text" placeholder="手机号"/></li>
 	           </ul>
 	         </div>
 	         <div class="modal-footer">
-	            <button type="button" class="btn btn-warning">
 	               	开始砍价
-	            </button>
 	         </div>
 	      </div><!-- /.modal-content -->
 		</div>	
@@ -150,15 +146,15 @@
 	           	<ul class="list-group">
 	           		<li class="list-group-itme">
 	           			<img src="img/head.png" alt="pic" />
-	           			一场说砍就砍的旅行，<r>12.24</r>元不谢！
+	           			<span>linsy</span>，<r>12.24</r>元不谢！
 	           		</li>
 	           		<li class="list-group-itme">
 	           			<img src="img/tubiao1.png" alt="pic" />
-	           			一场说砍就砍的旅行，<r>20.24</r>元不谢！
+	           			<span>linsy</span>，<r>20.24</r>元不谢！
 	           		</li>
 	           		<li class="list-group-itme">
 	           			<img src="img/tubiao2.png" alt="pic" />
-	           			一场说砍就砍的旅行，<r>33.12</r>元不谢！
+	           			<span>linsy</span>，<r>33.12</r>元不谢！
 	           		</li>
 	           	</ul>
 	           </ul>
@@ -216,7 +212,7 @@
 	/*倒计时方法*/	
 	function show_time(){ 
 	var time_start = new Date().getTime(); //设定当前时间
-	var time_end =  new Date("2015/10/01 00:00:00").getTime(); //设定目标时间
+	var time_end =  new Date("2015/10/15 00:00:00").getTime(); //设定目标时间
 	// 计算时间差 
 	var time_distance = time_end - time_start; 
 //	// 天
@@ -251,7 +247,7 @@
 	// 设置定时器
 	setTimeout("show_time()",1000); 
 }
-	function changeH(id){
+/*	function changeH(id){
 		$(id).modal('show');
 		$(id).on('shown.bs.modal', function () {
 		var m_h=$('.modal-content').outerHeight(); 
@@ -259,6 +255,6 @@
 		var top=(p_h-m_h)/2;
 		$(id).animate({paddingTop:top},'normal');
 		})
-	}
+	}*/
 	</script>
 </html>
