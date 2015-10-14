@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$("h2").click(function(){
+			$("h2").hide();
+		});
+	});
+
+	$(document).ready(function(){
+		$("#start").click(function(){
+			$("#box").animate({height:200},"slow");
+		});
+	});
+
+	$(document).ready(function(){
+		$("#btn").click(function(){
+			$("#box").animate({width:200},"slow");
+		});
+	});
+  </script>
+ </head>
+ <body>
+  <h2>aaaaaaaaaaaaaaaaaa</h2>
+  <h3><a href="#" id="start">Start Animation</a></h3>
+  <div id="box" style="background:grey;height:100px;width:100px;position:relative">
+		
+  </div>
+  <button id="btn">改变div的宽度</button>
+ </body>
+</html>
